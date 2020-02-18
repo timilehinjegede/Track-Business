@@ -5,12 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.timilehinjegede.track_business.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,13 +23,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,InventoryActivity.class));
                 break;
             case R.id.secondCardView:
-                Toast.makeText(this,"Second",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, VoucherActivity.class));
                 break;
             case R.id.thirdCardView:
-                Toast.makeText(this,"Third",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, SalesActivity.class));
                 break;
             case R.id.forthCardView:
-                Toast.makeText(this,"Forth",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, SaleHistoryActivity.class));
+                break;
+            case R.id.fifthCardView:
+                startActivity(new Intent(MainActivity.this, PurchaseActivity.class));
+                break;
+            case R.id.sixthCardView:
+                startActivity(new Intent(MainActivity.this, PurchaseHistoryActivity.class));
                 break;
         }
     }

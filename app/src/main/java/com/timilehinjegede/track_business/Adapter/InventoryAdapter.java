@@ -106,10 +106,10 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
                                     return true;
                                 case R.id.viewSales:
 //                                viewSales();
-                                    viewFilterSelected = "sales";
+                                    viewFilterSelected = "saleshistory";
                                     position = getAdapterPosition();
                                     onProductClickListener.onProductClicked(productList.get(position),viewFilterSelected);
-//                                    Toast.makeText(context,"View sales",Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(context,"View saleshistory",Toast.LENGTH_SHORT).show();
                                     return true;
                             }
                             return false;

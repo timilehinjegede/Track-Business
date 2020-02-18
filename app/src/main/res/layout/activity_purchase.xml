@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Fragments.PurchasesFragment">
+    tools:context=".Activities.PurchaseActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Record Purchases"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_margin="10dp"
         >
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:lines="2"
+                android:id="@+id/purchasesNameOfProduct"
                 android:hint="Name of goods"
                 />
 
@@ -31,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
@@ -44,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Quantity of goods"
                     android:inputType="number"
+                    android:id="@+id/purchasesQuantityOfProduct"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -59,12 +75,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number|numberDecimal"
+                android:id="@+id/purchasesUnitPriceOfProduct"
                 android:hint="Unit Price"
                 />
 
@@ -74,6 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
@@ -85,7 +104,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/purchasesDiscountOfProduct"
                     android:inputType="number|numberDecimal"
+                    android:layout_marginRight="7dp"
                     android:hint="Discount"
                     />
 
@@ -101,6 +122,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
+                    android:id="@+id/purchasesTotalPriceOfProduct"
                     android:hint="Total Price"
                     />
 
@@ -112,12 +134,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:id="@+id/customerPurchasedFrom"
                 android:inputType="text"
                 android:hint="Name of Customer Purchased From"
                 />
@@ -127,12 +151,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:id="@+id/purchasesPassword"
                 android:hint="Password"
                 />
 
@@ -141,12 +167,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
+                android:id="@+id/purchasesConfrimPassword"
                 android:inputType="number"
                 />
 
@@ -165,6 +193,9 @@
                 android:layout_height="wrap_content"
                 android:text="Cancel"
                 android:layout_weight="1"
+                android:id="@+id/purchasesCancelButton"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 />
 
 
@@ -172,7 +203,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Record Purchase"
+                android:id="@+id/purchasesRecordButton"
                 android:layout_weight="1"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 />
 
         </LinearLayout>

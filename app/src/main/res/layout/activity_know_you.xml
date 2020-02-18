@@ -7,39 +7,61 @@
     tools:context=".Activities.KnowYouActivity"
     android:orientation="vertical"
     android:gravity="center"
+    android:padding="15dp"
     >
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/knowYouTextView"
-        android:text="Let's \n get to know \n your business"
-        />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proceed by entering name of your business"
+        android:text="Let's\nget to\nknow\nyour business"
+        android:layout_weight="2"
+        android:gravity="left|center|bottom"
+        android:textSize="60sp"
+        android:textStyle="bold"
         />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
         >
 
-        <com.google.android.material.textfield.TextInputEditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name of Business"
+            android:text="Proceed by entering name of your business"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
             />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            >
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Tracking"
-        android:id="@+id/getStartedButton"
-        />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of Business"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Tracking"
+            android:id="@+id/getStartedButton"
+            android:background="@drawable/button_bg"
+            android:padding="13dp"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>

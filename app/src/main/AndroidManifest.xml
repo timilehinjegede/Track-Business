@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.InventoryActivity"></activity>
+        <activity android:name=".Activities.VoucherActivity" />
+        <activity android:name=".Activities.SaleHistoryActivity" />
+        <activity android:name=".Activities.PurchaseHistoryActivity"/>
+        <activity android:name=".Activities.SalesActivity" />
+        <activity android:name=".Activities.PurchaseActivity" />
+        <activity android:name=".Activities.InventoryActivity" />
         <activity android:name=".Activities.KnowYouActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity"></activity>
+        <activity android:name=".Activities.MainActivity" />
     </application>
 
 </manifest>

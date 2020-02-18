@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SalesFragment"
     android:orientation="vertical"
-    >
+    android:gravity="center"
+    tools:context=".Activities.SalesActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Record Sales"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_margin="10dp"
         >
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:lines="2"
                 android:hint="Name of goods"
+                android:id="@+id/salesNameOfProduct"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_weight="1"
                 >
 
@@ -45,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Quantity of goods"
                     android:inputType="number"
+                    android:id="@+id/salesQuantityOfProduct"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +79,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -67,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number|numberDecimal"
                 android:hint="Unit Price"
+                android:id="@+id/salesUnitPriceOfProduct"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -75,12 +97,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginRight="7dp"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -88,6 +113,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     android:hint="Discount"
+                    android:id="@+id/salesDiscountOfProduct"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,6 +121,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_weight="1"
                 >
 
@@ -103,6 +130,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     android:hint="Total Price"
+                    android:id="@+id/salesTotalPriceOfProduct"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,6 +140,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_marginBottom="7dp"
             android:layout_height="wrap_content"
             >
 
@@ -121,13 +151,16 @@
                 android:lines="1"
                 android:inputType="text"
                 android:hint="Name of Customer Sold To"
+                android:id="@+id/salesCustomerSoldTo"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -135,6 +168,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="Password"
+                android:id="@+id/salesPassword"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -142,12 +176,15 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_marginBottom="7dp"
             >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
+                android:id="@+id/salesConfirmPassword"
                 android:inputType="number"
                 />
 
@@ -165,6 +202,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
+                android:id="@+id/salesCancelButton"
+                android:padding="15dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 />
 
@@ -173,7 +213,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Record Sale"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:padding="15dp"
+                android:id="@+id/salesRecordButton"
                 />
 
         </LinearLayout>
